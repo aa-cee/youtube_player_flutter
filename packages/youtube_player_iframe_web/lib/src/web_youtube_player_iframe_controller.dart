@@ -5,7 +5,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
-import 'dart:ui' as ui;
+import 'dart:ui_web';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
@@ -147,7 +147,7 @@ class YoutubePlayerIframeWeb extends PlatformWebViewWidget {
   YoutubePlayerIframeWeb(PlatformWebViewWidgetCreationParams params)
       : _controller = params.controller as WebYoutubePlayerIframeController,
         super.implementation(params) {
-    ui.platformViewRegistry.registerViewFactory(
+    platformViewRegistry.registerViewFactory(
       _controller._params.ytiFrame.id,
       (int viewId) => _controller._params.ytiFrame,
     );
