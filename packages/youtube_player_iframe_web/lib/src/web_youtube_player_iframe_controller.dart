@@ -5,12 +5,11 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
+import 'dart:ui' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
-
-import 'platform_view_stub.dart' if (dart.library.html) 'dart:ui' as ui;
 
 /// An implementation of [PlatformWebViewControllerCreationParams] using Flutter
 /// for Web API.
